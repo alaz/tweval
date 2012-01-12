@@ -28,8 +28,8 @@
   </developers>
 
   <properties>
-    <scala.version>2.8.1</scala.version>
-    <lift.version>2.3</lift.version>
+    <scala.version>2.8.2</scala.version>
+    <lift.version>2.4</lift.version>
     <java.src.version>1.5</java.src.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.twitter</groupId>
       <artifactId>util-eval</artifactId>
-      <version>1.11.4</version>
+      <version>1.12.9</version>
     </dependency>
     <!-- Logging -->
     <dependency>
@@ -116,6 +116,18 @@
           </execution>
         </executions>
       </plugin>
+<plugin>
+<artifactId>maven-war-plugin</artifactId>
+<version>2.1.1</version>
+<configuration>
+<archive>
+<manifest>
+<addClasspath>true</addClasspath>
+</manifest>
+</archive>
+<archiveClasses>true</archiveClasses>
+</configuration>
+</plugin>
     </plugins>
   </build>
 
